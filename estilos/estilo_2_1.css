@@ -313,7 +313,10 @@ main {
     background-image: url(../img/icono_prev.png);
 }
 /* SECCION PROMOS Y PRECIOS */
-.promos-container{
+.bg-orange{
+    background-color: var(--color3);
+}
+/* .promos-container{
     display: flex;
     flex-wrap: wrap;
     width: 100%;
@@ -363,27 +366,29 @@ main {
     padding: 5px;
     justify-content: center;
     text-align: center;
-}
+} */
 
 /* SECCION GALERIA */
-.galeria{
+.paddingx-4{
+    padding: 0 4%;
+}
+/* .galeria{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(3, 22vw);
     column-gap: 15px;
     padding: 10px;
-}
+} */
 
 /* SECCION CONTACTO */
 
-.info-contacto{
-    display: grid;
-    grid-template-columns: 200px auto;
-    grid-template-rows: repeat(5, 60px);
-    column-gap: 15px;
-    padding: 50px;
-    font-family: var(--font2);
-    font-size: var(--sz3);
+.card-header{
+    background-color: rgb(255, 196, 108);
+    font-family: var(--font1);
+    font-size: var(--sz4);
+}
+.card-body{
+    background-color: rgb(255, 245, 159);
 }
 
 /* FOOTER */
