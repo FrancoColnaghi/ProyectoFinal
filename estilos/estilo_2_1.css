@@ -29,7 +29,6 @@
     --sz6: 1.2rem;
     --sz7: 1.0rem;
 
-
 }
 
 /* -----NORMALIZE----- */
@@ -183,6 +182,9 @@ main {
     color: var(--color4);
     padding: 0 16px;
 }
+.nav-link:hover{
+    color: var(--color4);
+}
 
 /* ------CONTENIDO PRINCIPAL----- */
 .contenido-principal {
@@ -195,27 +197,39 @@ main {
     background-color: var(--color3);
 }
 
-.nav-interno {
-    display: flex;
-    justify-content: space-around;
-    width: 60%;
-    border-radius: 50px;
-    border: 1px solid black;
-    background-color: rgba(255, 223, 223, 0.548);
-    margin-top: 10px;
-    position: sticky;
-    top: 20px;
-}
-
-.nav-interno picture {
-    width: 60px;
-}
-
-.sec-menu {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+.accordion {
+    --bs-accordion-color: #000;
+    --bs-accordion-bg: rgb(255, 196, 0);
+    --bs-accordion-transition: color 0.15s ease-in-out,background-color 0.15s ease-in-out,border-color 0.15s ease-in-out,box-shadow 0.15s ease-in-out,border-radius 0.15s ease;
+    --bs-accordion-border-color: var(--bs-border-color);
+    --bs-accordion-border-width: 1px;
+    --bs-accordion-border-radius: 0.375rem;
+    --bs-accordion-inner-border-radius: calc(0.375rem - 1px);
+    --bs-accordion-btn-padding-x: 1.25rem;
+    --bs-accordion-btn-padding-y: 1rem;
+    --bs-accordion-btn-color: var(--bs-body-color);
+    --bs-accordion-btn-bg: var(--bs-accordion-bg);
+    --bs-accordion-btn-icon: url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='var%28--bs-body-color%29'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e);
+    --bs-accordion-btn-icon-width: 1.25rem;
+    --bs-accordion-btn-icon-transform: rotate(-180deg);
+    --bs-accordion-btn-icon-transition: transform 0.2s ease-in-out;
+    --bs-accordion-btn-active-icon: url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%230c63e4'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e);
+    --bs-accordion-btn-focus-border-color: black;
+    --bs-accordion-btn-focus-box-shadow: 0 0 0 0.25rem rgba(0, 0, 0, 0.5);
+    --bs-accordion-body-padding-x: 1.25rem;
+    --bs-accordion-body-padding-y: 1rem;
+    --bs-accordion-active-color: black;
+    --bs-accordion-active-bg: rgb(255, 196, 0);
     width: 100%;
+}
+
+.accordion-item{
+    margin-top: 25px;
+}
+
+.accordion-button{
+    font-family: var(--font1);
+    font-size: var(--s4);
 }
 
 .sec-menu_cat {
@@ -225,7 +239,7 @@ main {
     /* border: 1px solid black; */
     grid-template-areas: "tit tit tit";
     justify-content: center;
-    
+    background-color: var(--color1);
 }
 .cat1{
     padding-top: 10px;
@@ -282,23 +296,22 @@ main {
     width: 50%;
     padding: 40px 10px 50px;
 }
+.carousel-inner{
+    margin-top: 30px;
+}
+.carousel-item{
+    transition: all 1s;
+}
 
-.envios__panel h2{
-    width: 100%;
-    height: 25px;
+.carousel-item > h2{
     text-align: center;
 }
-.envios__panel picture{
-    display: flex;
-    width: 90%;
-    height: 100%;
-    border: 1px solid black;
-    background-color: aliceblue;
+.carousel-control-next-icon {
+    background-image: url(../img/icono_next.png);
 }
-.envios__panel iframe{
-    width: 100%;
+.carousel-control-prev-icon {
+    background-image: url(../img/icono_prev.png);
 }
-
 /* SECCION PROMOS Y PRECIOS */
 .promos-container{
     display: flex;

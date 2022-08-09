@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <link rel="stylesheet" href="./estilos/estilo_2_1.css">
     <title>ENVIOS</title>
 </head>
@@ -44,21 +45,30 @@
             <a class="nav-link" href="./contacto.html">CONTACTO</a>
         </nav>
         <section class="contenido-principal">
-            <div class="envios__panel">
-                <h2>Podes pasarlo a buscar por nuestro local</h2>
-                <picture>
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d849.7651150358384!2d-60.72753717074858!3d-31.577389856302148!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xd1b6cbb5fcb20908!2zMzHCsDM0JzM4LjYiUyA2MMKwNDMnMzcuMiJX!5e0!3m2!1ses-419!2sar!4v1659360746050!5m2!1ses-419!2sar"
-                        style="border:0;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </picture>
-            </div>
-            <div class="envios__panel">
-                <h2>Te lo enviamos a domicilio dentro de estas zonas</h2>
-                <picture>
-                    <img src="./img/reparto.png" alt="mapa reparto">
-                </picture>
-            </div>
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <h2>Podes pasarlo a buscar por nuestro local</h2>
+                    <img src="./img/ubicacion_local.png" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <h2>Te lo enviamos a domicilio dentro de estas zonas</h2>
+                    <img src="./img/mapa_reparto.png" class="d-block w-100" alt="...">
+                  </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
         </section>
         <footer>
             <p><b>REALIZA TU PEDIDO A NUESTRO WHATSAPP</b></p>
@@ -66,6 +76,8 @@
             <p><b>342-5430420</b></p>
         </footer>
     </main>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+
 </body>
 
 </html>
