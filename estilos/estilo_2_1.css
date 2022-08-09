@@ -90,7 +90,6 @@ header {
     justify-content: center;
 }
 .img-container h1{
-    
     top: 190px;
     margin: 0 auto;
     font-family: var(--font1);
@@ -100,7 +99,7 @@ header {
 .logo{
     display: flex;
     width: 100%;
-    position: absolute:
+    position: absolute;
     top: 10;
 }
 .logo img{
@@ -177,7 +176,6 @@ main {
 aside{
     display: flex;
     flex-wrap: wrap;
-    width: ;
 }
 
 aside nav{
