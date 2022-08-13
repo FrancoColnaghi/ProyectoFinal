@@ -70,6 +70,7 @@ body {
     justify-content: center;
     width: 100%;
     max-width: 1600px;
+    animation:  ef_fondo infinite 15s; ;
 }
 
 /* -------HEADER----------- */
@@ -79,7 +80,7 @@ header {
     width: 100%;
     height: 280px;
     align-items: center;
-    background-color: var(--color3);
+    /* background-color: var(--color3); */
 }
 
 .img-container{
@@ -92,11 +93,13 @@ header {
 }
 .img-container h1{
     margin: 0 auto;
+    text-align: center;
     font-family: var(--font1);
     font-size: var(--sz2);
     z-index: 120;
     position: absolute;
     top:180px;
+    animation: ef_tit infinite 8s ease 2s;
 }
 .logo{
     display: flex;
@@ -111,6 +114,7 @@ header {
     min-width: 150px;
     margin: 5px auto;
     z-index: 100;
+    animation:  ef_logo infinite 8s ease 2s;
 }
 .fondo-logo{
     display: flex;
@@ -119,7 +123,7 @@ header {
     min-width: 150px;
     margin: 0 auto;
     z-index: 100;
-    background-color: var(--color3);
+    animation:  ef_fondo infinite 15s;
     border-radius: 100px;
 }
 
@@ -175,7 +179,7 @@ main {
     padding: 20px;
     width: 100%;
     min-height: 100vh;
-    background-color: var(--color3);
+    /* background-color: var(--color3); */
 }
 
 aside{
@@ -285,13 +289,19 @@ aside>.nav-carta{
 
 
 /* SECCION ENVIOS */
+.seccion-envios{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
 .envios__panel{
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 25px 45vw;
     justify-items: center;
     width: 50%;
-    padding: 40px 10px 50px;
+    padding: 20px 10px 30px;
 }
 
 .envios__panel h2{
@@ -385,7 +395,7 @@ aside>.nav-carta{
 }
 
 /* FOOTER */
-footer {
+.footer {
 
     border: 1px solid rgb(221, 221, 221);
     background-color: white;
@@ -428,6 +438,30 @@ footer {
     font-weight: 600;
 }
 
+.footer-2{
+    width: 100%;
+    text-align: center;
+    height: 30px;
+    background-color: white;
+    border-top: 1px solid gray;
+
+    position: fixed;
+    bottom: 0;
+}
+.footer-2__linea{
+   display: flex;
+   justify-content: center;
+   align-content: center;
+}
+.footer-2__linea>img{
+    width: 30px;
+}
+.footer-2__linea>p{
+    font-size: var(--sp-lg);
+    line-height: 30px;
+    padding: 0 20px 0 5px;
+}
+
 
 @media (max-width: 1250px){
     .info__titulo{
@@ -439,6 +473,12 @@ footer {
 }
 
 @media (max-width: 1040px){
+
+    .nav {
+        padding: 0 4%;
+    }
+
+
     aside>.nav-carta{
         font-size: var(--sz5);
     }
@@ -458,7 +498,7 @@ footer {
         font-size: var(--sz7);
     }
 
-    footer {
+    .footer {
         width: 242px;
     }
     
@@ -468,6 +508,15 @@ footer {
 }
 
 @media (max-width: 815px){
+    .nav {
+        padding: 0 4%;
+        font-size: var(--sz6);
+    }
+    
+    .nav-link {
+        padding: var(--sp-sm) 16px;
+    }
+
     aside>.nav-carta{
         font-size: var(--sz6);
     }
@@ -478,7 +527,7 @@ footer {
         width: 120px;
     }
 
-    footer {
+    .footer {
         width: 202px;
 
         justify-content: space-evenly;
@@ -494,27 +543,6 @@ footer {
 }
 
 @media (max-width: 768px){
-    .primer-panel {
-        padding: var(--sp-sm) 4%;
-        font-size: var(--sz6);
-    }
-    
-    .encabezado div h1 {
-        display: inline;
-        text-align: center;
-        /* background-color: rgba(255, 255, 255, 0.4); */
-        font-family: var(--font1);
-        font-size: var(--sz2);
-    }
-
-    .nav{
-        font-size: var(--sz6);
-        padding: var(--sp-sm) 4%;
-    }
-    .nav-link{
-        padding: 0 5px;
-        font-weight: 800;
-    }
 
     main {
         padding: 20px 0;
@@ -522,19 +550,6 @@ footer {
 
     .nav-carta>.row>.row__nom{
         display: none;
-    }
-
-    footer {
-        flex-wrap: wrap;
-        width: 80%;
-        padding-top: 5px;
-        height: auto;
-        border-top-left-radius: 20px;
-        border-top-right-radius: 20px;
-    }
-    
-    footer p {
-        text-align: center;
     }
 
     /* SECCION ENVIOS */
@@ -558,9 +573,74 @@ footer {
         padding: 50px 10px;
         font-size: var(--sz6);
     }
+
+
+    /* FOOTER */
+    .footer {
+
+        width: 250px;
+        height: 50px;  
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        bottom: 0;
+
+        transform-origin: 0px 0px;
+        transform: rotate(-90deg) translateX(-50px) translateY(20px);
+    }
+    .footer__linea-1 {
+        display: none;
+    }
+
+}
+@media (max-width: 630px){
+    .footer-2__linea__p1{
+        display: none;
+    }
 }
 
 @media (max-width: 600px){
+    header {
+        height: 280px;
+    }
+
+    .img-container{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        height: 220px;
+        /* align-items: center; */
+        justify-content: center;
+    }
+    .img-container>h1{
+        font-size: var(--sz3);
+        top:185px;
+    }
+
+    .nav {
+        height: 60px;
+        text-align: center;
+
+        display: grid;
+        grid-template-columns: repeat(6,auto);
+        grid-template-rows: 30px 30px;
+        grid-template-areas: 
+        "carta carta envios envios promos promos"
+        "galeria galeria galeria contacto contacto contacto";
+    }   
+    .nav-link {
+        text-decoration: none;
+        color: var(--color4);
+        line-height: 20px;
+        padding: 5px;
+    }
+    .nav-link__1{grid-area: carta;}
+    .nav-link__2{grid-area: envios;}
+    .nav-link__3{grid-area: promos;}
+    .nav-link__4{grid-area: galeria;}
+    .nav-link__5{grid-area: contacto;}
+
+
     .seccion-menu__categoria {
         grid-template-columns: 1fr;
         grid-template-rows: auto ;
@@ -584,22 +664,17 @@ footer {
     }
 }
 
+@media (max-width: 450px){
+
+    .img-container>h1{
+        font-size: var(--sz4);
+    }
+}
+
 @media (max-width: 425px){
-    .encabezado div{
-        flex-wrap: wrap;
-        justify-content: center;
-        padding: 10px 10;
-    }
-    .encabezado div h1 {
-        font-size: var(--sz3);
-        min-width: 150px;
-    }
-    .encabezado div picture {
-        min-width: 150px;
-    }
-    .nav-link{
-        padding: 5px 5px;
-        font-size: var(--sz6)
+
+    .img-container>h1{
+        font-size: var(--sz5);
     }
 
     .seccion-menu__categoria{
@@ -647,5 +722,16 @@ footer {
 
     20%{
         transform: scale(100%);
+    }
+}
+@keyframes ef_fondo{
+    0%{
+        background-color: rgb(224, 223, 162);
+    }
+    50%{
+        background-color: rgb(224, 195, 162);
+    }
+    100%{
+        background-color: rgb(224, 223, 162);
     }
 }
