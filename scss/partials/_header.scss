@@ -1,0 +1,180 @@
+/* -------HEADER----------- */
+header {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 280px;
+    align-items: center;
+    .img-container{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        height: 230px;
+        justify-content: center;
+        .logo{
+            display: flex;
+            width: 100%;
+            position: absolute;
+            top: 10;
+            .fondo-logo{
+                display: flex;
+                width: 190px;
+                height: 190px;
+                min-width: 150px;
+                margin: 0 auto;
+                z-index: 100;
+                animation:  ef_fondo infinite 15s;
+                border-radius: 100px;
+                img{
+                    display: flex;
+                    width: 180px;
+                    height: 180px;
+                    min-width: 150px;
+                    margin: 5px auto;
+                    z-index: 100;
+                    animation:  ef_logo infinite 8s ease 2s;
+                }
+            }
+        }
+        .banner{
+            display: flex;
+            width: 100%;
+            height: 180px;
+            max-width: 1600px;
+            position: absolute;
+            top:25px;
+            img{
+                display: flex;
+                width: 100%;
+                height: 140px;
+                z-index: 80;
+                object-fit: cover;
+            }
+        }
+        h1{
+            margin: 0 auto;
+            text-align: center;
+            font-family: $f-especial;
+            font-size: 3rem;
+            z-index: 120;
+            position: absolute;
+            top:180px;
+            animation: ef_tit infinite 8s ease 2s;
+        }
+    }
+    .nav {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        height: 50px;
+        justify-content: space-around;
+        align-items: center;
+        padding: 0 8%;
+        background-color: $c-secondary;
+        font-family: $f-especial;
+        font-size: 1.5rem;
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
+        .nav-link {
+            text-decoration: none;
+            color: $c-font;
+            padding: 4px 16px 0;
+            line-height: 44px;
+        }
+        .nav-link:hover{
+            background-color: $c-font;
+            color: $c-secondary;
+            transition: all .5s;
+        }
+    }
+}
+
+@media (max-width: 1040px){
+    header>.nav {
+        padding: 0 4%;
+    }
+}
+
+@media (max-width: 815px){
+    header{
+        .img-container{
+            h1{
+                font-size: 2.4rem;
+            }
+        }
+        .nav {
+            font-size: 1.3rem;
+        }
+    }
+}
+
+@media (max-width: 600px){
+    header{
+        .img-container{
+            h1{
+                font-size: 1.8rem;
+                top:185px;
+            }
+        }
+        .nav {
+            height: 60px;
+            text-align: center;
+            display: grid;
+            grid-template-columns: repeat(6,auto);
+            grid-template-rows: 30px 30px;
+            grid-template-areas: 
+            "carta carta envios envios promos promos"
+            "galeria galeria galeria contacto contacto contacto";
+            .nav-link {
+                text-decoration: none;
+                color: var(--color4);
+                line-height: 20px;
+                padding: 5px;
+            }
+            .nav-link__1{grid-area: carta;}
+            .nav-link__2{grid-area: envios;}
+            .nav-link__3{grid-area: promos;}
+            .nav-link__4{grid-area: galeria;}
+            .nav-link__5{grid-area: contacto;}
+        } 
+    }
+    
+
+      
+    
+
+}
+
+@media (max-width: 450px){
+    header{
+        .img-container{
+            h1{
+                font-size: 1.6rem;
+                top:188px;
+            }
+        }
+    }
+}
+
+@media (max-width: 400px){
+    header{
+        .img-container{
+            h1{
+                font-size: 1.4rem;
+                top:190px;
+            }
+        }
+    }
+}
+
+@media (max-width: 345px){
+    header{
+        .img-container{
+            h1{
+                font-size: 1.2rem;
+            }
+        }
+    }
+}
+
+

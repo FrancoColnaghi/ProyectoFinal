@@ -1,0 +1,19 @@
+@font-face {
+    font-family: DIOGENES;
+    src: url('DIOGENES.ttf') format('truetype');
+}
+
+@import './misc/variables';
+@import './misc/normalize';
+
+@import './partials/estructure';
+@import './partials/header';
+@import './partials/footer';
+
+@import './views/carta';
+@import './views/envios';
+@import './views/promos';
+@import './views/galeria';
+@import './views/contacto';
+
+@import './partials/animations';

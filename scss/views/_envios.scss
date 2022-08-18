@@ -1,0 +1,31 @@
+/* SECCION ENVIOS */
+.seccion-envios{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+.envios__panel{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 25px 45vw;
+    justify-items: center;
+    width: 50%;
+    padding: 20px 10px 30px;
+}
+
+.envios__panel h2{
+    width: 100%;
+    height: 25px;
+    text-align: center;
+}
+.envios__panel picture{
+    display: flex;
+    width: 90%;
+    height: 100%;
+    border: 1px solid black;
+    background-color: aliceblue;
+}
+.envios__panel iframe{
+    width: 100%;
+}

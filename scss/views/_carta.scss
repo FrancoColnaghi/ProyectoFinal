@@ -1,0 +1,211 @@
+/* ------CONTENIDO PRINCIPAL----- */
+main {
+    display: flex;
+    padding: 20px;
+    width: 100%;
+    min-height: 100vh;
+    aside{
+        display: inline-block;
+        .nav-carta{
+            padding: 5px;
+            border: 1px solid $c-line;
+        
+            position:sticky;
+            top: 20px;
+            display: flex;
+            flex-direction: column;
+            font-family: $f-neutral;
+            font-size: 1.6rem;
+            .row{
+                margin: 5px;
+                padding: 0px 10px;
+                border-radius: 20px;
+                background-color: $c-secondary;
+                display: flex;
+                .row__logo{
+                    width: 60px;
+                }
+                .row__nom{
+                    width: 180px;
+                    display: flex;
+                    align-items: center;
+                    padding-left: 4%;
+                }
+            }
+        }
+    }
+    .seccion-menu {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: left;
+        width: 100%;
+        &__categoria {
+            padding: 10px;
+            margin-left: 10px;
+            margin-bottom: 10px;
+            border: 1px solid $c-line;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto auto;
+            grid-template-areas: "tit tit";
+            gap: 10px;
+            justify-content: center;
+            .categoria__titulo {
+                grid-area: tit;
+                width: 100%;
+                padding: 10px;
+                border-radius: 20px;
+                background-color: $c-secondary;
+                font-family: $f-neutral;
+                font-size: 1.5rem;
+            }
+            .categoria__tarjeta {
+                padding: 10px;
+                border-radius: 20px;
+                background-color: $c-secondary;        
+                display: flex;
+                .tarjeta__imagen {
+                    width: 50%;
+                    max-width: 140px;
+                    height: fit-content;
+                    img {
+                        border-radius: 20px; 
+                    }
+                }
+                .tarjeta__info {
+                    width: 80%;
+                    padding: 0 10px;
+                    display: flex;
+                    flex-direction: column;
+                    text-align: left;          
+                    .info__titulo{
+                        display: flex;
+                        text-align: left;
+                        font-family: $f-especial;
+                        font-size: 1.8rem;
+                    }
+                    .info__descripcion{
+                        display: flex;
+                        text-align: left;
+                        font-family: $f-neutral;
+                        font-size: 1.2rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+@media (max-width: 1024px){
+    main{
+        aside>.nav-carta{
+            font-size: 1.3rem;
+            .row{
+                .row__logo{
+                    width: 50px;
+                }
+                .row__nom{
+                    width: 130px;
+                }
+            }
+        }
+        .seccion-menu>.seccion-menu__categoria{
+            .categoria__titulo{
+                font-size: 1.3rem;
+            }
+            .categoria__tarjeta{
+                .tarjeta__imagen{
+                    min-width: 100px ;
+                }
+                .tarjeta__info{
+                    .info__titulo{
+                        font-size: 1.6rem;
+                    }
+                    .info__descripcion{
+                        font-size: .9rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px){
+    main{
+        padding: 20px 10px;
+        aside>.nav-carta{
+            .row{
+                padding: 0px 5px;
+                .row__logo{
+                    width: 35px;
+                }
+                .row__nom{
+                    display: none;
+                }
+            }
+        }
+        .seccion-menu>.seccion-menu__categoria{
+            grid-template-columns: 1fr;
+            grid-template-rows: auto ;
+            grid-template-areas: "tit";
+            .categoria__titulo{
+                font-size: 1.3rem;
+            }
+            .categoria__tarjeta{
+                .tarjeta__imagen{
+                    width: 100px ;
+                }
+                .tarjeta__info{
+                    .info__titulo{
+                        font-size: 1.6rem;
+                    }
+                    .info__descripcion{
+                        font-size: 1rem;
+                    }
+                }
+            }
+            
+        }
+    }
+}
+
+@media (max-width: 425px){
+    main{
+        flex-direction: column;
+        aside>.nav-carta{
+            flex-direction: row;
+            justify-content: space-evenly;
+            .row{
+                padding: 0px 5px;
+                .row__logo{
+                    width: 35px;
+                }
+                .row__nom{
+                    display: none;
+                }
+            }
+        }
+        .seccion-menu>.seccion-menu__categoria{
+            margin: 10px 0px;
+            .categoria__titulo{
+                font-size: 1.3rem;
+            }
+            .categoria__tarjeta{
+                .tarjeta__imagen{
+                    width: 100px ;
+                }
+                .tarjeta__info{
+                    .info__titulo{
+                        font-size: 1.6rem;
+                    }
+                    .info__descripcion{
+                        font-size: 1rem;
+                    }
+                }
+            }
+            
+        }
+    }
+}

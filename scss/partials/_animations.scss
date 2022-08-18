@@ -1,0 +1,33 @@
+@keyframes ef_logo{
+    0%{
+        transform: rotate(360deg);
+    }
+
+    20%{
+        transform: rotate(0deg);
+    }
+}
+@keyframes ef_tit{
+    5%{
+        transform: scale(90%);
+    }
+
+    14%{
+        transform: scale(110%);
+    }
+
+    20%{
+        transform: scale(100%);
+    }
+}
+@keyframes ef_fondo{
+    0%{
+        background-color: rgb(224, 223, 162);
+    }
+    50%{
+        background-color: rgb(224, 195, 162);
+    }
+    100%{
+        background-color: rgb(224, 223, 162);
+    }
+}
