@@ -193,14 +193,14 @@ header {
     display: none; } }
 
 /* ------CONTENIDO PRINCIPAL----- */
-main {
+.main-carta {
   display: flex;
   padding: 20px;
   width: 100%;
   min-height: 100vh; }
-  main aside {
+  .main-carta aside {
     display: inline-block; }
-    main aside .nav-carta {
+    .main-carta aside .nav-carta {
       padding: 5px;
       border: 1px solid #bbbbbb;
       position: sticky;
@@ -209,25 +209,25 @@ main {
       flex-direction: column;
       font-family: arial;
       font-size: 1.6rem; }
-      main aside .nav-carta .row {
+      .main-carta aside .nav-carta .row {
         margin: 5px;
         padding: 0px 10px;
         border-radius: 20px;
         background-color: #ececec;
         display: flex; }
-        main aside .nav-carta .row .row__logo {
+        .main-carta aside .nav-carta .row .row__logo {
           width: 60px; }
-        main aside .nav-carta .row .row__nom {
+        .main-carta aside .nav-carta .row .row__nom {
           width: 180px;
           display: flex;
           align-items: center;
           padding-left: 4%; }
-  main .seccion-menu {
+  .main-carta .seccion-menu {
     display: flex;
     flex-wrap: wrap;
     justify-content: left;
     width: 100%; }
-    main .seccion-menu__categoria {
+    .main-carta .seccion-menu__categoria {
       padding: 10px;
       margin-left: 10px;
       margin-bottom: 10px;
@@ -238,7 +238,7 @@ main {
       grid-template-areas: "tit tit";
       gap: 10px;
       justify-content: center; }
-      main .seccion-menu__categoria .categoria__titulo {
+      .main-carta .seccion-menu__categoria .categoria__titulo {
         grid-area: tit;
         width: 100%;
         padding: 10px;
@@ -246,124 +246,154 @@ main {
         background-color: #ececec;
         font-family: arial;
         font-size: 1.5rem; }
-      main .seccion-menu__categoria .categoria__tarjeta {
+      .main-carta .seccion-menu__categoria .categoria__tarjeta {
         padding: 10px;
         border-radius: 20px;
         background-color: #ececec;
         display: flex; }
-        main .seccion-menu__categoria .categoria__tarjeta .tarjeta__imagen {
+        .main-carta .seccion-menu__categoria .categoria__tarjeta .tarjeta__imagen {
           width: 50%;
           max-width: 140px;
           height: fit-content; }
-          main .seccion-menu__categoria .categoria__tarjeta .tarjeta__imagen img {
+          .main-carta .seccion-menu__categoria .categoria__tarjeta .tarjeta__imagen img {
             border-radius: 20px; }
-        main .seccion-menu__categoria .categoria__tarjeta .tarjeta__info {
+        .main-carta .seccion-menu__categoria .categoria__tarjeta .tarjeta__info {
           width: 80%;
           padding: 0 10px;
           display: flex;
           flex-direction: column;
           text-align: left; }
-          main .seccion-menu__categoria .categoria__tarjeta .tarjeta__info .info__titulo {
+          .main-carta .seccion-menu__categoria .categoria__tarjeta .tarjeta__info .info__titulo {
             display: flex;
             text-align: left;
             font-family: DIOGENES;
             font-size: 1.8rem; }
-          main .seccion-menu__categoria .categoria__tarjeta .tarjeta__info .info__descripcion {
+          .main-carta .seccion-menu__categoria .categoria__tarjeta .tarjeta__info .info__descripcion {
             display: flex;
             text-align: left;
             font-family: arial;
             font-size: 1.2rem; }
 
 @media (max-width: 1024px) {
-  main aside > .nav-carta {
+  .main-carta aside > .nav-carta {
     font-size: 1.3rem; }
-    main aside > .nav-carta .row .row__logo {
+    .main-carta aside > .nav-carta .row .row__logo {
       width: 50px; }
-    main aside > .nav-carta .row .row__nom {
+    .main-carta aside > .nav-carta .row .row__nom {
       width: 130px; }
-  main .seccion-menu > .seccion-menu__categoria .categoria__titulo {
+  .main-carta .seccion-menu > .seccion-menu__categoria .categoria__titulo {
     font-size: 1.3rem; }
-  main .seccion-menu > .seccion-menu__categoria .categoria__tarjeta .tarjeta__imagen {
+  .main-carta .seccion-menu > .seccion-menu__categoria .categoria__tarjeta .tarjeta__imagen {
     min-width: 100px; }
-  main .seccion-menu > .seccion-menu__categoria .categoria__tarjeta .tarjeta__info .info__titulo {
+  .main-carta .seccion-menu > .seccion-menu__categoria .categoria__tarjeta .tarjeta__info .info__titulo {
     font-size: 1.6rem; }
-  main .seccion-menu > .seccion-menu__categoria .categoria__tarjeta .tarjeta__info .info__descripcion {
+  .main-carta .seccion-menu > .seccion-menu__categoria .categoria__tarjeta .tarjeta__info .info__descripcion {
     font-size: .9rem; } }
 
 @media (max-width: 768px) {
-  main {
+  .main-carta {
     padding: 20px 10px; }
-    main aside > .nav-carta .row {
+    .main-carta aside > .nav-carta .row {
       padding: 0px 5px; }
-      main aside > .nav-carta .row .row__logo {
+      .main-carta aside > .nav-carta .row .row__logo {
         width: 35px; }
-      main aside > .nav-carta .row .row__nom {
+      .main-carta aside > .nav-carta .row .row__nom {
         display: none; }
-    main .seccion-menu > .seccion-menu__categoria {
+    .main-carta .seccion-menu > .seccion-menu__categoria {
       grid-template-columns: 1fr;
       grid-template-rows: auto;
       grid-template-areas: "tit"; }
-      main .seccion-menu > .seccion-menu__categoria .categoria__titulo {
+      .main-carta .seccion-menu > .seccion-menu__categoria .categoria__titulo {
         font-size: 1.3rem; }
-      main .seccion-menu > .seccion-menu__categoria .categoria__tarjeta .tarjeta__imagen {
+      .main-carta .seccion-menu > .seccion-menu__categoria .categoria__tarjeta .tarjeta__imagen {
         width: 100px; }
-      main .seccion-menu > .seccion-menu__categoria .categoria__tarjeta .tarjeta__info .info__titulo {
+      .main-carta .seccion-menu > .seccion-menu__categoria .categoria__tarjeta .tarjeta__info .info__titulo {
         font-size: 1.6rem; }
-      main .seccion-menu > .seccion-menu__categoria .categoria__tarjeta .tarjeta__info .info__descripcion {
+      .main-carta .seccion-menu > .seccion-menu__categoria .categoria__tarjeta .tarjeta__info .info__descripcion {
         font-size: 1rem; } }
 
 @media (max-width: 425px) {
-  main {
+  .main-carta {
     flex-direction: column; }
-    main aside > .nav-carta {
+    .main-carta aside > .nav-carta {
       flex-direction: row;
       justify-content: space-evenly; }
-      main aside > .nav-carta .row {
+      .main-carta aside > .nav-carta .row {
         padding: 0px 5px; }
-        main aside > .nav-carta .row .row__logo {
+        .main-carta aside > .nav-carta .row .row__logo {
           width: 35px; }
-        main aside > .nav-carta .row .row__nom {
+        .main-carta aside > .nav-carta .row .row__nom {
           display: none; }
-    main .seccion-menu > .seccion-menu__categoria {
+    .main-carta .seccion-menu > .seccion-menu__categoria {
       margin: 10px 0px; }
-      main .seccion-menu > .seccion-menu__categoria .categoria__titulo {
+      .main-carta .seccion-menu > .seccion-menu__categoria .categoria__titulo {
         font-size: 1.3rem; }
-      main .seccion-menu > .seccion-menu__categoria .categoria__tarjeta .tarjeta__imagen {
+      .main-carta .seccion-menu > .seccion-menu__categoria .categoria__tarjeta .tarjeta__imagen {
         width: 100px; }
-      main .seccion-menu > .seccion-menu__categoria .categoria__tarjeta .tarjeta__info .info__titulo {
+      .main-carta .seccion-menu > .seccion-menu__categoria .categoria__tarjeta .tarjeta__info .info__titulo {
         font-size: 1.6rem; }
-      main .seccion-menu > .seccion-menu__categoria .categoria__tarjeta .tarjeta__info .info__descripcion {
+      .main-carta .seccion-menu > .seccion-menu__categoria .categoria__tarjeta .tarjeta__info .info__descripcion {
         font-size: 1rem; } }
 
 /* SECCION ENVIOS */
-.seccion-envios {
+.main-envios {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  width: 100%; }
-
-.envios__panel {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 25px 45vw;
-  justify-items: center;
-  width: 50%;
-  padding: 20px 10px 30px; }
-
-.envios__panel h2 {
   width: 100%;
-  height: 25px;
-  text-align: center; }
+  min-height: 70vh; }
+  .main-envios .panel {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 30px 45vw;
+    justify-items: center;
+    align-items: center;
+    width: 50%;
+    padding: 20px 10px 30px; }
+    .main-envios .panel h2 {
+      font-size: 1.6rem;
+      width: 100%;
+      text-align: center; }
+    .main-envios .panel picture {
+      display: flex;
+      width: 90%;
+      height: 100%;
+      border: 1px solid black;
+      background-color: aliceblue; }
+    .main-envios .panel iframe {
+      width: 100%; }
 
-.envios__panel picture {
+@media (max-width: 880px) {
+  .main-envios .panel {
+    grid-template-rows: 30px auto;
+    justify-items: center;
+    width: 90%; }
+    .main-envios .panel picture {
+      height: 80vw; } }
+
+@media (max-width: 500px) {
+  .main-envios .panel {
+    grid-template-rows: 50px 80vw; }
+    .main-envios .panel h2 {
+      font-size: 1.4rem; } }
+
+.main-promos {
   display: flex;
-  width: 90%;
-  height: 100%;
-  border: 1px solid black;
-  background-color: aliceblue; }
+  padding: 20px;
+  width: 100%;
+  min-height: 100vh; }
 
-.envios__panel iframe {
-  width: 100%; }
+.main-galeria {
+  display: flex;
+  padding: 20px;
+  width: 100%;
+  min-height: 100vh; }
+
+.main-contacto {
+  display: flex;
+  padding: 20px;
+  width: 100%;
+  min-height: 100vh; }
 
 @keyframes ef_logo {
   0% {

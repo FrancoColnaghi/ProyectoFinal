@@ -1,5 +1,5 @@
 /* ------CONTENIDO PRINCIPAL----- */
-main {
+.main-carta {
     display: flex;
     padding: 20px;
     width: 100%;
@@ -99,7 +99,7 @@ main {
 
 
 @media (max-width: 1024px){
-    main{
+    .main-carta{
         aside>.nav-carta{
             font-size: 1.3rem;
             .row{
@@ -133,7 +133,7 @@ main {
 }
 
 @media (max-width: 768px){
-    main{
+    .main-carta{
         padding: 20px 10px;
         aside>.nav-carta{
             .row{
@@ -172,7 +172,7 @@ main {
 }
 
 @media (max-width: 425px){
-    main{
+    .main-carta{
         flex-direction: column;
         aside>.nav-carta{
             flex-direction: row;
@@ -205,7 +205,6 @@ main {
                     }
                 }
             }
-            
         }
     }
 }

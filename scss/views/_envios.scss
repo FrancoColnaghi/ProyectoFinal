@@ -1,31 +1,56 @@
 /* SECCION ENVIOS */
-.seccion-envios{
+.main-envios{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     width: 100%;
-}
-.envios__panel{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 25px 45vw;
-    justify-items: center;
-    width: 50%;
-    padding: 20px 10px 30px;
+    min-height: 70vh;
+    .panel{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 30px 45vw;
+        justify-items: center;
+        align-items: center;
+        width: 50%;
+        padding: 20px 10px 30px;
+        h2{
+            font-size: 1.6rem;
+            width: 100%;
+            text-align: center;
+        }
+        picture{
+            display: flex;
+            width: 90%;
+            height: 100%;
+            border: 1px solid black;
+            background-color: aliceblue;
+        }
+        iframe{
+            width: 100%;
+        }
+    }
 }
 
-.envios__panel h2{
-    width: 100%;
-    height: 25px;
-    text-align: center;
+@media (max-width: 880px){
+    .main-envios{
+        .panel{
+            grid-template-rows: 30px auto;
+            justify-items: center;
+            width: 90%;
+            picture{
+                height: 80vw;
+            }
+        }
+    }
 }
-.envios__panel picture{
-    display: flex;
-    width: 90%;
-    height: 100%;
-    border: 1px solid black;
-    background-color: aliceblue;
-}
-.envios__panel iframe{
-    width: 100%;
+
+@media (max-width: 500px){
+    .main-envios{
+        .panel{
+            grid-template-rows: 50px 80vw;
+            h2{
+                font-size: 1.4rem;
+            }
+        }
+    }
 }
