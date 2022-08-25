@@ -23,7 +23,7 @@ header {
                 min-width: 150px;
                 margin: 0 auto;
                 z-index: 100;
-                animation:  ef_fondo infinite 15s;
+                background-color: map-get($color , c-bg1 );
                 border-radius: 100px;
                 img{
                     display: flex;
@@ -70,20 +70,20 @@ header {
         justify-content: space-around;
         align-items: center;
         padding: 0 8%;
-        background-color: $c-secondary;
+        background-color: map-get($color , c-secondary);
         font-family: $f-especial;
         font-size: 1.5rem;
         border-top: 1px solid black;
         border-bottom: 1px solid black;
         .nav-link {
             text-decoration: none;
-            color: $c-font;
+            color: map-get($color , c-font);
             padding: 4px 16px 0;
             line-height: 44px;
         }
         .nav-link:hover{
-            background-color: $c-font;
-            color: $c-secondary;
+            background-color: map-get($color , c-font);
+            color: map-get($color , c-secondary);
             transition: all .5s;
         }
     }

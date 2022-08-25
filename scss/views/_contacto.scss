@@ -1,6 +1,38 @@
 .main-contacto {
-    display: flex;
+    @include flex(column, nowrap, flex-start, center);
     padding: 20px;
     width: 100%;
     min-height: 100vh;
+
+    .card {
+        border-radius: 15px;
+        background-color: map-get($color, c-secondary);
+        @include w-h(80%, 50px);
+        @include flex(row, nowrap, space-between, center);
+        padding: 0 20px;
+        margin: 15px 0;
+        @include font($f-neutral,1.5rem);
+    }
+}
+
+@media (max-width: 768px){
+    .main-contacto {
+        .card {
+            @include w-h(95%, 45px);
+            padding: 0 15px;
+            margin: 10px 0;
+            @include font($f-neutral,1.2rem);
+        }
+    }
+}
+
+@media (max-width: 425px){
+    .main-contacto {
+        .card {
+            @include w-h(98%, 42px);
+            padding: 0 15px;
+            margin: 8px 0;
+            @include font($f-neutral,1rem);
+        }
+    }
 }

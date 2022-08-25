@@ -1,6 +1,54 @@
 .main-promos {
-    display: flex;
+    @include flex(row,nowrap,center,stretch);
     padding: 20px;
-    width: 100%;
     min-height: 100vh;
+    @include w-h(90%,auto);
+    .promos-container{
+        @include flex(column,nowrap,flex-start,stretch);
+        padding: 20px;
+        .categoria{
+            text-align: center;
+            border-radius: 15px;
+            margin: 10px 0;
+            padding: 15px;
+            background-color: map-get($color , c-secondary);
+            @include font($f-neutral,1.5rem);
+            
+            .titulo{
+                padding: 15px 0;
+            }
+            .promo-description{
+                padding: 10px 0;
+                border-top: 1px dashed black;
+                h3,p{
+                    padding: 5px 0;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px){
+    .main-promos{
+        padding: 10px;
+        @include w-h(95%,auto);
+        .promos-container{
+            padding: 15px;
+            .categoria{
+                @include font($f-neutral,1.2rem);
+            }
+        }
+    }
+}
+@media (max-width: 425px){
+    .main-promos{
+        padding: 5px;
+        @include w-h(98%,auto);
+        .promos-container{
+            padding: 10px;
+            .categoria{
+                @include font($f-neutral,1.1rem);
+            }
+        }
+    }
 }

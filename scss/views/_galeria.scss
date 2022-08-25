@@ -1,6 +1,30 @@
 .main-galeria {
     display: flex;
     padding: 20px;
-    width: 100%;
-    min-height: 100vh;
+    min-height: 70vh;
+    .galeria{
+        @include grid(3,auto,4,1fr,15px);
+        padding: 10px 5%;
+        img{
+            border-radius: 10px;
+        }
+    }
+}
+
+@media (max-width: 768px){
+    .main-galeria {
+        .galeria{
+            @include grid(4,auto,3,1fr,12px);
+            padding: 10px 5%;
+        }
+    }
+}
+
+@media (max-width: 425px){
+    .main-galeria {
+        .galeria{
+            @include grid(6,auto,2,1fr,10px);
+            padding: 10px 2%;
+        }
+    }
 }

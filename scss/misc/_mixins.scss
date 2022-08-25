@@ -1,0 +1,23 @@
+@mixin w-h($w,$h) {
+    width: $w;
+    height: $h;
+}
+
+@mixin font($family,$size) {
+    font-family: $family;
+    font-size: $size;
+}
+
+@mixin flex($dir,$fr,$jc,$ai) {
+    display: flex;
+    flex-flow: $dir $fr;
+    justify-content: $jc;
+    align-items: $ai;
+}
+
+@mixin grid($row,$row-sz,$col,$col-sz,$gap){
+    display: grid;
+    grid-template-columns: repeat($col,$col-sz);
+    grid-template-rows: repeat($row, $row-sz);
+    gap: $gap;
+}

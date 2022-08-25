@@ -7,6 +7,6 @@ body {
         justify-content: center;
         width: 100%;
         max-width: 1600px;
-        animation:  ef_fondo infinite 15s;
+        background-color: map-get($color , c-bg1 );
     }
 }
