@@ -87,10 +87,10 @@
         aside>.nav-carta{
             font-size: 1.3rem;
             .row{
-                .row__logo{
+                &__logo{
                     width: 50px;
                 }
-                .row__nom{
+                &__nom{
                     width: 130px;
                 }
             }
