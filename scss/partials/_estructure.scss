@@ -2,9 +2,8 @@ body {
     display: flex;
     justify-content: center;
     .main_container{
-        display: flex;
+        @extend body;
         flex-wrap: wrap;
-        justify-content: center;
         width: 100%;
         max-width: 1600px;
         background-color: map-get($color , c-bg1 );

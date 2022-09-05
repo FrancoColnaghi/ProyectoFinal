@@ -22,13 +22,11 @@ a {
   text-decoration: none;
   color: black; }
 
-body {
+body, body .main_container {
   display: flex;
   justify-content: center; }
   body .main_container {
-    display: flex;
     flex-wrap: wrap;
-    justify-content: center;
     width: 100%;
     max-width: 1600px;
     background-color: #ffd986; }
@@ -201,11 +199,10 @@ header {
   align-items: stretch;
   padding: 20px;
   min-height: 100vh; }
-  .main-carta aside {
+  .main-carta aside, .main-carta aside .nav-carta .row .row__logo {
     display: inline-block; }
-    .main-carta aside .nav-carta {
+    .main-carta aside .nav-carta, .main-carta aside .nav-carta .row .row__logo .nav-carta {
       padding: 5px;
-      border: 1px solid #bbbbbb;
       position: sticky;
       top: 20px;
       display: flex;
@@ -214,7 +211,7 @@ header {
       align-items: stretch;
       font-family: arial;
       font-size: 1.6rem; }
-      .main-carta aside .nav-carta .row {
+      .main-carta aside .nav-carta .row, .main-carta aside .nav-carta .row .row__logo .nav-carta .row {
         margin: 5px;
         padding: 0px 10px;
         border-radius: 20px;
@@ -240,7 +237,6 @@ header {
       padding: 10px;
       margin-left: 10px;
       margin-bottom: 10px;
-      border: 1px solid #bbbbbb;
       display: grid;
       grid-template-columns: 1fr 1fr;
       grid-template-rows: auto auto;
@@ -251,9 +247,8 @@ header {
         grid-area: tit;
         padding: 10px;
         border-radius: 20px;
-        background-color: #ffffff;
         font-family: arial;
-        font-size: 1.5rem; }
+        font-size: 2rem; }
       .main-carta .seccion-menu__categoria .categoria__tarjeta {
         padding: 10px;
         border-radius: 20px;
@@ -282,11 +277,11 @@ header {
             font-size: 1.2rem; }
 
 @media (max-width: 1024px) {
-  .main-carta aside > .nav-carta {
+  .main-carta aside > .nav-carta, .main-carta aside .nav-carta .row .row__logo > .nav-carta {
     font-size: 1.3rem; }
-    .main-carta aside > .nav-carta .row__logo {
+    .main-carta aside > .nav-carta .row__logo, .main-carta aside .nav-carta .row .row__logo > .nav-carta .row__logo {
       width: 50px; }
-    .main-carta aside > .nav-carta .row__nom {
+    .main-carta aside > .nav-carta .row__nom, .main-carta aside .nav-carta .row .row__logo > .nav-carta .row__nom {
       width: 130px; }
   .main-carta .seccion-menu > .seccion-menu__categoria .categoria__titulo {
     font-size: 1.3rem; }
@@ -300,11 +295,11 @@ header {
 @media (max-width: 768px) {
   .main-carta {
     padding: 20px 10px; }
-    .main-carta aside > .nav-carta .row {
+    .main-carta aside > .nav-carta .row, .main-carta aside .nav-carta .row .row__logo > .nav-carta .row {
       padding: 0px 5px; }
-      .main-carta aside > .nav-carta .row .row__logo {
+      .main-carta aside > .nav-carta .row .row__logo, .main-carta aside .nav-carta .row .row__logo > .nav-carta .row .row__logo {
         width: 35px; }
-      .main-carta aside > .nav-carta .row .row__nom {
+      .main-carta aside > .nav-carta .row .row__nom, .main-carta aside .nav-carta .row .row__logo > .nav-carta .row .row__nom {
         display: none; }
     .main-carta .seccion-menu > .seccion-menu__categoria {
       grid-template-columns: 1fr;
@@ -322,14 +317,14 @@ header {
 @media (max-width: 425px) {
   .main-carta {
     flex-direction: column; }
-    .main-carta aside > .nav-carta {
+    .main-carta aside > .nav-carta, .main-carta aside .nav-carta .row .row__logo > .nav-carta {
       flex-direction: row;
       justify-content: space-evenly; }
-      .main-carta aside > .nav-carta .row {
+      .main-carta aside > .nav-carta .row, .main-carta aside .nav-carta .row .row__logo > .nav-carta .row {
         padding: 0px 5px; }
-        .main-carta aside > .nav-carta .row .row__logo {
+        .main-carta aside > .nav-carta .row .row__logo, .main-carta aside .nav-carta .row .row__logo > .nav-carta .row .row__logo {
           width: 35px; }
-        .main-carta aside > .nav-carta .row .row__nom {
+        .main-carta aside > .nav-carta .row .row__nom, .main-carta aside .nav-carta .row .row__logo > .nav-carta .row .row__nom {
           display: none; }
     .main-carta .seccion-menu > .seccion-menu__categoria {
       margin: 10px 0px; }

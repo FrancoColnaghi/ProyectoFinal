@@ -7,7 +7,6 @@
         display: inline-block;
         .nav-carta{
             padding: 5px;
-            border: 1px solid map-get($color , c-line);
             position:sticky;
             top: 20px;
             @include flex(column,nowrap,flex-start,stretch);
@@ -20,6 +19,7 @@
                 background-color: map-get($color , c-secondary);
                 display: flex;
                 .row__logo{
+                    @extend aside;
                     @include w-h(60px,auto)
                 }
                 .row__nom{
@@ -36,7 +36,6 @@
             padding: 10px;
             margin-left: 10px;
             margin-bottom: 10px;
-            border: 1px solid map-get($color , c-line);
             display: grid;
             grid-template-columns: 1fr 1fr;
             grid-template-rows: auto auto;
@@ -47,8 +46,7 @@
                 grid-area: tit;
                 padding: 10px;
                 border-radius: 20px;
-                background-color: map-get($color , c-secondary);
-                @include font($f-neutral,1.5rem);
+                @include font($f-neutral,2rem);
             }
             .categoria__tarjeta {
                 padding: 10px;
