@@ -1,29 +1,22 @@
 .footer{
-    width: 100%;
+    @include w-h(100%,50px);
     max-width: 1600px;
-    height: 50px;
     background: linear-gradient(0deg,black 70%,rgba(255, 255, 255, 0) 90%);
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex(row,nowrap,center,center);
     position: fixed;
     bottom: 0;
     &__linea{
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include flex(row,nowrap,center,center);
         height: 40px;
         padding-top: 10px;
         img{
-            width: 30px;
-            height: 30px;
+            @include w-h(30px,30px)
         }
         p{
-            font-size: 1rem;
+            @include font($f-neutral,1rem);
             font-weight: 800;
             color: white;
-            font-family: $f-neutral;
             padding: 0 16px 0 5px;
         }
     }

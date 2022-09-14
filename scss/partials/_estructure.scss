@@ -1,13 +1,9 @@
 body {
-    display: flex;
-    justify-content: center;
+    @include flex(row,wrap,center,stretch);
     .main_container{
         @extend body;
-        flex-wrap: wrap;
         width: 100%;
         max-width: 1600px;
         background-color: map-get($color , c-bg1 );
     }
 }
-
-// incluyo extend

@@ -1,8 +1,6 @@
 /* SECCION ENVIOS */
 .main-envios{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    @include flex(row,wrap,center,stretch);
     width: 100%;
     min-height: 70vh;
     .panel{
@@ -20,8 +18,7 @@
         }
         picture{
             display: flex;
-            width: 90%;
-            height: 100%;
+            @include w-h(90%,100%);
             max-height: 718px;
             border: 1px solid black;
             background-color: aliceblue;
